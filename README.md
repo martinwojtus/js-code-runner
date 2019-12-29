@@ -11,7 +11,7 @@ A lightweight js library that will make your **js/html/css** codes come alive.
 
 ##### Into this
 
-![](/examples/images/js-code-runner.gif)
+![](/examples/images/js-code-runner-example.gif)
 
 ## Features
 * Using lazy loading (with **dynamic-import**)
