@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xml:lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rust Example</title>
+    <link href="../dist/jcr.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
+          integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous"/>
+
+</head>
+<body>
+
+<div class="js-code-runner" data-css="[]" data-js="[]">
+<pre><code class="line-numbers language-rust">
+fn main() {
+    let greetings = [&quot;Hello&quot;, &quot;Hola&quot;, &quot;Bonjour&quot;,
+                     &quot;Ciao&quot;, &quot;こんにちは&quot;, &quot;안녕하세요&quot;,
+                     &quot;Cześć&quot;, &quot;Ol&aacute;&quot;, &quot;Здравствуйте&quot;,
+                     &quot;Ch&agrave;o bạn&quot;, &quot;您好&quot;, &quot;Hallo&quot;,
+                     &quot;Hej&quot;, &quot;Ahoj&quot;, &quot;سلام&quot;];
+
+    for (num, greeting) in greetings.iter().enumerate() {
+        print!(&quot;{} : &quot;, greeting);
+        match num {
+            0 =&gt;  println!(&quot;This code is editable and runnable!&quot;),
+            1 =&gt;  println!(&quot;&iexcl;Este c&oacute;digo es editable y ejecutable!&quot;),
+            2 =&gt;  println!(&quot;Ce code est modifiable et ex&eacute;cutable !&quot;),
+            3 =&gt;  println!(&quot;Questo codice &egrave; modificabile ed eseguibile!&quot;),
+            4 =&gt;  println!(&quot;このコードは編集して実行出来ます！&quot;),
+            5 =&gt;  println!(&quot;여기에서 코드를 수정하고 실행할 수 있습니다!&quot;),
+            6 =&gt;  println!(&quot;Ten kod można edytować oraz uruchomić!&quot;),
+            7 =&gt;  println!(&quot;Este c&oacute;digo &eacute; edit&aacute;vel e execut&aacute;vel!&quot;),
+            8 =&gt;  println!(&quot;Этот код можно отредактировать и запустить!&quot;),
+            9 =&gt;  println!(&quot;Bạn c&oacute; thể edit v&agrave; run code trực tiếp!&quot;),
+            10 =&gt; println!(&quot;这段代码是可以编辑并且能够运行的！&quot;),
+            11 =&gt; println!(&quot;Dieser Code kann bearbeitet und ausgef&uuml;hrt werden!&quot;),
+            12 =&gt; println!(&quot;Den h&auml;r koden kan redigeras och k&ouml;ras!&quot;),
+            13 =&gt; println!(&quot;Tento k&oacute;d můžete upravit a spustit&quot;),
+            14 =&gt; println!(&quot;این کد قابلیت ویرایش و اجرا دارد!&quot;),
+            _ =&gt;  {},
+        }
+    }
+}
+</code></pre>
+</div>
+
+<script type="text/javascript" src="../dist/view.jcr.js"></script>
+
+<script>JsCodeRunner();</script>
+
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html xml:lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Example</title>
+    <link href="../dist/jcr.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
+          integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous"/>
+
+</head>
+<body>
+
+<div class="js-code-runner">
+<pre><code class="line-numbers language-JavaScript">const validateCreditCardNumber = (value) =&gt; {
+  	// accept only digits, dashes or spaces
+	if (/[^0-9-\s]+/.test(value)) return false;
+
+	// The Luhn Algorithm.
+	let nCheck = 0;
+  	let nDigit = 0;
+  	let bEven = false;
+
+	value = value.replace(/\D/g, &quot;&quot;);
+
+	for (let n = value.length - 1; n &gt;= 0; n--) {
+		let cDigit = value.charAt(n);
+		let nDigit = parseInt(cDigit, 10);
+
+		if (bEven) {
+			if ((nDigit *= 2) &gt; 9) nDigit -= 9;
+		}
+
+		nCheck += nDigit;
+		bEven = !bEven;
+	}
+
+	return (nCheck % 10) == 0;
+}
+
+// Test
+console.log(validateCreditCardNumber(&#39;378282246310005&#39;)); // American Express
+console.log(validateCreditCardNumber(&#39;371449635398431&#39;)); // American Express
+console.log(validateCreditCardNumber(&#39;378734493671000&#39;)); // American Express Corporate
+console.log(validateCreditCardNumber(&#39;5610591081018250&#39;)); // Australian BankCard
+console.log(validateCreditCardNumber(&#39;30569309025904&#39;)); // Diners Club
+console.log(validateCreditCardNumber(&#39;38520000023237&#39;)); // Diners Club
+console.log(validateCreditCardNumber(&#39;6011111111111117&#39;)); // Discover
+console.log(validateCreditCardNumber(&#39;6011000990139424&#39;)); // Discover
+console.log(validateCreditCardNumber(&#39;3530111333300000&#39;)); // JCB
+console.log(validateCreditCardNumber(&#39;3566002020360505&#39;)); // JCB
+console.log(validateCreditCardNumber(&#39;5555555555554444&#39;)); // MasterCard
+console.log(validateCreditCardNumber(&#39;5105105105105100&#39;)); // MasterCard
+console.log(validateCreditCardNumber(&#39;4111111111111111&#39;)); // Visa
+console.log(validateCreditCardNumber(&#39;4012888888881881&#39;)); // Visa
+console.log(validateCreditCardNumber(&#39;4222222222222&#39;)); // Visa
+console.log(validateCreditCardNumber(&#39;5019717010103742&#39;)); // Dankort (PBS)
+console.log(validateCreditCardNumber(&#39;6331101999990016&#39;)); // Switch/Solo (Paymentech)</code></pre>
+</div>
+
+<script type="text/javascript" src="../dist/view.jcr.js"></script>
+
+<script>
+    JsCodeRunner();
+</script>
+
+</body>
+</html>

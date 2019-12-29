@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xml:lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sass Example</title>
+    <link href="../dist/jcr.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
+          integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous"/>
+
+</head>
+<body>
+
+<div class="js-code-runner" data-css="[]" data-js="[]">
+<pre><code class="line-numbers language-sass">
+/* Define standard variables and values for website */
+$bgcolor: lightblue;
+$textcolor: darkblue;
+$fontsize: 18px;
+
+/* Use the variables */
+body
+  background-color: $bgcolor;
+  color: $textcolor;
+  font-size: $fontsize;
+
+</code></pre>
+
+
+<pre><code class="line-numbers language-html">
+&lt;h1&gt;Hello World&lt;/h1&gt;
+
+&lt;p&gt;This is a paragraph.&lt;/p&gt;
+</code></pre>
+
+</div>
+
+<script type="text/javascript" src="../dist/view.jcr.js"></script>
+
+<script>JsCodeRunner();</script>
+
+</body>
+</html>

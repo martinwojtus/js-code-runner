@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xml:lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rx Example</title>
+    <link href="../dist/jcr.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
+          integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous"/>
+
+</head>
+<body>
+
+<div class="js-code-runner" data-css="[]" data-js="['https://unpkg.com/rxjs@5.2.0/bundles/Rx.min.js']">
+<pre><code class="line-numbers language-javascript">
+/*
+  timer takes a second argument, how often to emit subsequent values
+  in this case we will emit first value after 1 second and subsequent
+  values every 2 seconds after
+*/
+const source = Rx.Observable.timer(1000, 2000);
+//output: 0,1,2,3,4,5......
+const subscribe = source.subscribe(val =&gt; console.log(val));
+</code></pre>
+</div>
+
+<script type="text/javascript" src="../dist/view.jcr.js"></script>
+
+<script>JsCodeRunner();</script>
+
+</body>
+</html>

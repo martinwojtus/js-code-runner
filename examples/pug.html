@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xml:lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pug Example</title>
+    <link href="../dist/jcr.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
+          integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous"/>
+
+</head>
+<body>
+
+<div class="js-code-runner" data-css="[]" data-js="[]">
+<pre><code class="line-numbers language-pug">
+ul
+    li
+      a(href='/') Home
+    li
+      a(href='/page-1') Page 1
+    li
+      a(href='/page-2') Page 2
+
+
+input.search(
+    type='text'
+    name='search'
+    placeholder='Enter a search term...'
+)
+
+p.
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+  veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+  commodo consequat.</code></pre>
+
+</div>
+
+<script type="text/javascript" src="../dist/view.jcr.js"></script>
+
+<script>JsCodeRunner();</script>
+
+</body>
+</html>

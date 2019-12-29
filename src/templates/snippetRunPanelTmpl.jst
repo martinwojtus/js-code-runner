@@ -1,0 +1,65 @@
+<div class="jcr-panel" id="jcr-{{=it.id}}">
+
+    <div class="jcr-tabs">
+        <ul></ul>
+    </div>
+
+    <div class="jcr-tabs-content">
+    </div>
+
+    <div class="jcr-output">
+
+        <div class="jcr-run-button">
+           RUN <i class="fas fa-caret-square-right"></i>
+        </div>
+
+        <div class="jcr-output-buttons hidden">
+            <div class="jcr-button-inner">
+                <div class="jcr-output-button jcr-open-output-terminal"><i class="fas fa-terminal" title="Show console"></i> Open console</div>
+                <div class="jcr-output-button jcr-increase-output-height"><i class="fas fa-chevron-down" title="Increase"></i> Increase</div>
+                <div class="jcr-output-button jcr-descrease-output-height"><i class="fas fa-chevron-up" title="Decrease"></i> Decrease</div>
+                <div class="jcr-output-button jcr-close-output"><i class="fas fa-times" title="Close"></i> Close output</div>
+            </div>
+         </div>
+
+        <div class="jcr-output-iframe hidden" style="height: 400px;">
+           <div class="jcr-output-overlay show"></div>
+           <iframe scrolling="yes"></iframe>
+        </div>
+
+        <div class="jcr-tilda hidden">
+            <div class="jcr-console">
+                <div class="jcr-toolbar">
+                    <div class="jcr-console-tab active">Console</div>
+                    <div class="jcr-right-side">
+                        <div class="jcr-log-notices">
+                            <div class="jcr-notice error"><i class="ion-close-circled"></i><span></span></div>
+                            <div class="jcr-notice log"><i class="ion-information-circled"></i><span></span></div>
+                        </div>
+                        <div class="jcr-tool-divider"></div>
+                        <div class="jcr-close-btn"><i class="fas fa-chevron-down"></i></div>
+                    </div>
+                </div>
+                <div class="jcr-subtoolbar">
+                    <div class="jcr-clear-btn" title="Clear console"><i class="fas fa-ban"></i></div>
+                    <div class="jcr-tool-divider"></div>
+                    <div class="jcr-options">
+                        <label><input type="checkbox" class="jcr-clear-console-on-reload" checked="checked"> Clear console on reload</label>
+                    </div>
+                </div>
+                <div class="jcr-console-content">
+                    <div class="jcr-console-logs">
+
+                    </div>
+                    <div class="jcr-console-editor">
+                        <i class="fas fa-chevron-right jcr-console-input-icon"></i>
+
+                        <div class="jcr-console-editor-wrapper">
+                            <input type="text"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

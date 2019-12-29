@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xml:lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue Example</title>
+    <link href="../dist/jcr.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
+          integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous"/>
+
+</head>
+<body>
+
+<div class="js-code-runner" data-css="[]" data-js="['https://unpkg.com/vue']">
+<pre><code class="line-numbers language-jsx">
+new Vue({
+  el: '#app',
+  data: { count: 0 },
+  methods: {
+    inc() {
+      this.count++
+    },
+    dec() {
+      this.count--
+    }
+  }
+})
+</code></pre>
+
+<pre><code class="line-numbers language-html">
+&lt;div id=&quot;app&quot;&gt;
+  &lt;h2&gt;{{ count }}&lt;/h2&gt;
+  &lt;button @click=&quot;inc&quot;&gt;inc&lt;/button&gt;
+  &lt;button @click=&quot;dec&quot;&gt;dec&lt;/button&gt;
+&lt;/div&gt;
+</code></pre>
+</div>
+
+<script type="text/javascript" src="../dist/view.jcr.js"></script>
+
+<script>JsCodeRunner();</script>
+
+</body>
+</html>

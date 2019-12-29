@@ -1,0 +1,25 @@
+
+<div>
+    {{? it.jsList.length !== 0}}
+    <h3><i class="fab fa-js-square"></i> JS</h3>
+    <ul class="jcr-list-group">
+    {{~it.jsList :js:jsIndex}}
+    <li class="jcr-list-group-item">
+        <a href="{{=js}}" target="_blank">{{=js}}</a>
+    </li>
+    {{~}}
+    </ul>
+    {{?}}
+
+
+    {{? it.cssList.length !== 0}}
+    <h3><i class="fas fa-file-code"></i> CSS</h3>
+    <ul class="jcr-list-group">
+    {{~it.cssList :css:cssIndex}}
+    <li class="jcr-list-group-item">
+        <a href="{{=css}}" target="_blank">{{=css}}</a>
+    </li>
+    {{~}}
+    </ul>
+    {{?}}
+</div>

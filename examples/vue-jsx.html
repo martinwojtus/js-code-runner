@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html xml:lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue JSX Example</title>
+    <link href="../dist/jcr.css" rel="stylesheet">
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
+          integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous"/>
+
+</head>
+<body>
+
+<div class="js-code-runner" data-css="[]" data-js="['https://unpkg.com/vue']">
+
+<pre><code class="line-numbers language-jsx vue-jsx">
+new Vue({
+  el: '#app',
+  data: { count: 0 },
+  methods: {
+    inc() {
+      this.count++
+    },
+    dec() {
+      this.count--
+    }
+  },
+  render() {
+    return (
+      &lt;div id=&quot;app&quot;&gt;
+        &lt;h2 class="counter"&gt;{this.count}&lt;/h2&gt;
+        &lt;button onClick={this.inc}&gt;inc&lt;/button&gt;
+        &lt;button onClick={this.dec}&gt;dec&lt;/button&gt;
+      &lt;/div&gt;
+    )
+  }
+})
+</code></pre>
+
+  <p></p>
+
+<pre><code class="line-numbers language-html">
+&lt;div id=&quot;app&quot;&gt;&lt;/div&gt;
+</code></pre>
+
+  <p></p>
+
+<pre><code class="line-numbers language-css">
+button {
+  color: white;
+  border: 1px solid #e2e2e2;
+  background: magenta;
+  padding: 10px 0;
+  font-size: 2rem;
+  width: 200px;
+}
+
+.counter {
+  font-size: 2rem;
+  margin-top: 20px;
+}
+</code></pre>
+</div>
+
+<script type="text/javascript" src="../dist/view.jcr.js"></script>
+
+<script>JsCodeRunner();</script>
+
+</body>
+</html>

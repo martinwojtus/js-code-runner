@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xml:lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CoffeeScript2 Example</title>
+    <link href="../dist/jcr.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
+          integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous"/>
+
+</head>
+<body>
+
+<div class="js-code-runner">
+<pre><code class="line-numbers language-coffeescript">
+eldest = if 24 &gt; 21 then &quot;Liz&quot; else &quot;Ike&quot;
+
+console.log eldest;
+
+globals = (name for name of window)[0...10]
+
+console.log globals
+
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+start   = numbers[0..2]
+
+middle  = numbers[3...-2]
+
+end     = numbers[-2..]
+
+copy    = numbers[..]
+
+console.log start
+console.log middle
+console.log end
+console.log copy
+
+</code></pre>
+</div>
+
+<script type="text/javascript" src="../dist/view.jcr.js"></script>
+
+<script>
+    JsCodeRunner();
+</script>
+
+</body>
+</html>

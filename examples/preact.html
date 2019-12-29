@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xml:lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Preact Example</title>
+    <link href="../dist/jcr.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
+          integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous"/>
+
+</head>
+<body>
+
+<div class="js-code-runner" data-css="[]" data-js="['https://unpkg.com/preact@10/dist/preact.umd.js', 'https://unpkg.com/preact@10/hooks/dist/hooks.umd.js']">
+<pre><code class="line-numbers language-jsx">
+/* @jsx h */
+const { h, render } = preact
+const { useState } = preactHooks
+
+const App = () =&gt; {
+  const [count, setCount] = useState(0)
+
+  const inc = () =&gt; setCount(count + 1)
+
+  const dec = () =&gt; setCount(count - 1)
+
+  return (
+    &lt;div&gt;
+      &lt;h2&gt;{count}&lt;/h2&gt;
+      &lt;button onClick={inc}&gt;Increment&lt;/button&gt;
+      &lt;button onClick={dec}&gt;Decrement&lt;/button&gt;
+    &lt;/div&gt;
+  )
+}
+
+render(&lt;App /&gt;, document.body)
+
+</code></pre>
+
+<pre><code class="line-numbers language-html">
+&lt;div&gt;&lt;/div&gt;
+</code></pre>
+</div>
+
+<script type="text/javascript" src="../dist/view.jcr.js"></script>
+
+<script>JsCodeRunner();</script>
+
+</body>
+</html>

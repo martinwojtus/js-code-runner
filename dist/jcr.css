@@ -1,0 +1,251 @@
+.jcr-panel {
+  padding: 5px; }
+  .jcr-panel .jcr-tabs {
+    clear: both; }
+    .jcr-panel .jcr-tabs ul {
+      position: relative;
+      top: 1px;
+      height: 40px;
+      margin: 20px 20px 0 0;
+      border: none; }
+      .jcr-panel .jcr-tabs ul li {
+        display: block;
+        float: left;
+        padding: 0 15px;
+        height: 40px;
+        font-size: 1.2em;
+        margin: 0 5px;
+        cursor: pointer;
+        line-height: 40px;
+        color: #121e32;
+        border: 1px solid white;
+        border-bottom: none;
+        margin-top: -1px;
+        text-indent: 0; }
+        .jcr-panel .jcr-tabs ul li::before {
+          content: ""; }
+        .jcr-panel .jcr-tabs ul li.active {
+          border: 1px solid #ccc;
+          border-bottom: 1px solid white;
+          margin-top: 1px;
+          border-top-left-radius: 5px;
+          border-top-right-radius: 5px; }
+  .jcr-panel .jcr-tabs-content {
+    clear: both;
+    border-right: 1px solid #bbb;
+    border-left: 1px solid #bbb;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    overflow: auto; }
+    .jcr-panel .jcr-tabs-content .jcr-tab-content {
+      display: none; }
+      .jcr-panel .jcr-tabs-content .jcr-tab-content.active {
+        display: block; }
+      .jcr-panel .jcr-tabs-content .jcr-tab-content .jcr-list-group {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        padding-left: 0;
+        margin-bottom: 0; }
+        .jcr-panel .jcr-tabs-content .jcr-tab-content .jcr-list-group .jcr-list-group-item {
+          position: relative;
+          display: block;
+          padding: .75rem 1.25rem;
+          margin-bottom: -1px;
+          background-color: #fff;
+          border: 1px solid rgba(0, 0, 0, 0.125);
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap; }
+          .jcr-panel .jcr-tabs-content .jcr-tab-content .jcr-list-group .jcr-list-group-item:last-child {
+            margin-bottom: 0;
+            border-bottom-right-radius: 5px;
+            border-bottom-left-radius: 5px; }
+          .jcr-panel .jcr-tabs-content .jcr-tab-content .jcr-list-group .jcr-list-group-item:first-child {
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px; }
+          .jcr-panel .jcr-tabs-content .jcr-tab-content .jcr-list-group .jcr-list-group-item a {
+            font-size: 18px; }
+  .jcr-panel .jcr-output {
+    border-bottom: 1px solid #bbb;
+    border-right: 1px solid #bbb;
+    border-left: 1px solid #bbb;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding-top: 10px; }
+    .jcr-panel .jcr-output .jcr-run-button {
+      margin-left: 10px;
+      margin-right: 10px;
+      margin-bottom: 10px;
+      font-family: Arial, serif;
+      font-size: 18px;
+      display: block;
+      text-align: center;
+      cursor: pointer;
+      color: #fff;
+      background-color: #007bff;
+      padding: 8px;
+      border-radius: 5px; }
+      .jcr-panel .jcr-output .jcr-run-button:hover {
+        background-color: #0070e2; }
+    .jcr-panel .jcr-output .jcr-output-buttons {
+      background-color: #fff;
+      padding-bottom: 10px;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      text-align: center; }
+      .jcr-panel .jcr-output .jcr-output-buttons.hidden {
+        display: none; }
+      .jcr-panel .jcr-output .jcr-output-buttons .jcr-output-button {
+        display: inline-block;
+        padding: 3px 5px;
+        background-color: #ffffff;
+        color: #404040;
+        font-family: monospace;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 11px; }
+        .jcr-panel .jcr-output .jcr-output-buttons .jcr-output-button.hidden {
+          display: none; }
+        .jcr-panel .jcr-output .jcr-output-buttons .jcr-output-button:hover {
+          background-color: #007bff;
+          color: #fff; }
+    .jcr-panel .jcr-output .jcr-tilda.hidden {
+      display: none; }
+    .jcr-panel .jcr-output .jcr-output-iframe iframe {
+      width: 100%;
+      height: 100%;
+      border: 0; }
+    .jcr-panel .jcr-output .jcr-output-iframe.hidden {
+      display: none; }
+    .jcr-panel .jcr-output .jcr-console {
+      background: #fff;
+      width: 100%;
+      overflow: hidden;
+      border-top: 1px solid #c5c5c5;
+      box-shadow: 1px -1px 2px rgba(0, 0, 0, 0.05);
+      border-bottom-left-radius: 6px;
+      border-bottom-right-radius: 6px; }
+      .jcr-panel .jcr-output .jcr-console .jcr-toolbar {
+        border-bottom: 1px solid #c5c5c5;
+        background: #f0f0f0;
+        width: 100%;
+        height: 28px;
+        font-family: monospace, monospace; }
+        .jcr-panel .jcr-output .jcr-console .jcr-toolbar .jcr-console-tab {
+          cursor: pointer;
+          width: 64px;
+          padding-left: 10px;
+          font-size: 14px;
+          height: 22px;
+          letter-spacing: -1px;
+          padding-top: 5px;
+          position: absolute;
+          color: #5f615f;
+          border-bottom: 1px solid #0366d6; }
+        .jcr-panel .jcr-output .jcr-console .jcr-toolbar .jcr-right-side {
+          right: 0;
+          position: absolute;
+          width: 60px; }
+          .jcr-panel .jcr-output .jcr-console .jcr-toolbar .jcr-right-side .jcr-tool-divider {
+            display: inline-block;
+            vertical-align: top;
+            border-left: 1px solid #ccc;
+            height: 18px;
+            margin: 5px 0; }
+          .jcr-panel .jcr-output .jcr-console .jcr-toolbar .jcr-right-side .jcr-close-btn {
+            display: inline-block;
+            color: #636363;
+            cursor: pointer;
+            font-size: 14px;
+            padding: 5px 8px; }
+      .jcr-panel .jcr-output .jcr-console .jcr-subtoolbar {
+        user-select: none;
+        border-bottom: 1px solid #dadada;
+        position: relative; }
+        .jcr-panel .jcr-output .jcr-console .jcr-subtoolbar .jcr-clear-btn {
+          cursor: pointer;
+          display: inline-block;
+          padding: 6px 5px 0 8px;
+          color: #828282;
+          font-size: 14px; }
+        .jcr-panel .jcr-output .jcr-console .jcr-subtoolbar .jcr-tool-divider {
+          display: inline-block;
+          vertical-align: top;
+          border-left: 1px solid #ccc;
+          height: 18px;
+          margin: 5px 0; }
+        .jcr-panel .jcr-output .jcr-console .jcr-subtoolbar .jcr-options {
+          margin-top: 4px;
+          vertical-align: top;
+          position: relative;
+          display: inline-block;
+          padding-left: 24px; }
+          .jcr-panel .jcr-output .jcr-console .jcr-subtoolbar .jcr-options label {
+            color: #5f615f;
+            font-size: 13px;
+            font-weight: 400;
+            font-family: monospace;
+            letter-spacing: -1px; }
+          .jcr-panel .jcr-output .jcr-console .jcr-subtoolbar .jcr-options input {
+            top: 0;
+            left: 4px;
+            position: absolute; }
+      .jcr-panel .jcr-output .jcr-console .jcr-console-content {
+        height: 200px;
+        overflow-y: auto; }
+        .jcr-panel .jcr-output .jcr-console .jcr-console-content .jcr-console-editor {
+          position: relative;
+          padding: 0 0 0 20px;
+          margin-top: 5px;
+          margin-bottom: 5px; }
+          .jcr-panel .jcr-output .jcr-console .jcr-console-content .jcr-console-editor .jcr-console-input-icon {
+            position: absolute;
+            left: 4px;
+            font-size: 14px;
+            top: 2px;
+            color: #3677f6; }
+          .jcr-panel .jcr-output .jcr-console .jcr-console-content .jcr-console-editor input {
+            border: 0;
+            font-size: 14px;
+            padding: 0;
+            margin: 0;
+            outline: 0;
+            width: 100%;
+            font-family: monospace, monospace; }
+        .jcr-panel .jcr-output .jcr-console .jcr-console-content .jcr-content-row {
+          min-height: 16px;
+          position: relative;
+          padding: 4px 10px 3px 9px;
+          font-size: 12px;
+          font-family: monospace, monospace;
+          border-bottom: 1px solid #f0f0f0; }
+          .jcr-panel .jcr-output .jcr-console .jcr-console-content .jcr-content-row.error {
+            border-top: 1px solid #fdd6d7;
+            border-bottom: 1px solid #fcd5d6;
+            color: #f9111f;
+            background: #fff0f0;
+            padding-left: 24px; }
+          .jcr-panel .jcr-output .jcr-console .jcr-console-content .jcr-content-row.output {
+            font-weight: 600;
+            padding-left: 24px; }
+            .jcr-panel .jcr-output .jcr-console .jcr-console-content .jcr-content-row.output .jcr-console-output-icon {
+              color: #bfbfbf; }
+          .jcr-panel .jcr-output .jcr-console .jcr-console-content .jcr-content-row.input {
+            padding-left: 24px; }
+            .jcr-panel .jcr-output .jcr-console .jcr-console-content .jcr-content-row.input .jcr-console-output-icon {
+              color: #bfbfbf; }
+          .jcr-panel .jcr-output .jcr-console .jcr-console-content .jcr-content-row .jcr-console-output-icon {
+            position: absolute;
+            left: 4px;
+            font-size: 14px;
+            top: 4px; }
+          .jcr-panel .jcr-output .jcr-console .jcr-console-content .jcr-content-row pre {
+            margin-top: 0;
+            margin-bottom: 0; }
+
