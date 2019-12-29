@@ -7,6 +7,7 @@ import proxyConsole from '!raw-loader!../output/proxyConsole';
 import TabsManager from "../tabs/tabsManager";
 import ButtonsManager from "../buttons/buttonsManager";
 import Resources from "./resources";
+import SpinnerManager from "../spin/spinnerManager";
 
 const replaceQuote = str => str.replace(/__QUOTE_LEFT__/g, '<');
 const createElement = tag => (content = '', attrs = {}) => {
@@ -24,6 +25,8 @@ export default class Snippet {
         this.el = el;
         this.id = Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15);
         this.codes = [];
+
+        this.snipperManager = new SpinnerManager(this.id);
 
         this.outputPreview = new PreviewOutput(this.id);
 
@@ -85,9 +88,12 @@ export default class Snippet {
         this.outputPreview.init();
         this.tabsManager.init();
         this.buttonsManager.init();
+        this.snipperManager.init();
     }
 
     run() {
+        this.snipperManager.start();
+
         let js = this.codes.filter(code => code.getCodeType().getType() === CODE_TYPE.JS)
             .map(code => code.getCode());
 
@@ -106,10 +112,12 @@ export default class Snippet {
                     this.prepareOutput(vals[0], vals[1], vals[2], this.getJsList(), this.getCssList());
                 })
                 .catch(e => {
+                    this.snipperManager.stop();
                     console.error(e.message);
                     this.jsConsole.error(e.frame ? e.message + '\n' + e.frame : e.stack);
                 });
         } catch (err) {
+            this.snipperManager.stop();
             console.error(err);
             this.jsConsole.error(err.message.trim());
         }
@@ -166,6 +174,8 @@ export default class Snippet {
 
         this.outputPreview.setOutput({head, body});
         this.showPanels(js, html);
+
+        this.snipperManager.stop();
     }
 
     showPanels(js, html) {
