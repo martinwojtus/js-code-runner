@@ -18,7 +18,7 @@
   "author": "Marcin Wojtysiak",
   "license": "MIT",
   "dependencies": {
-    "axios": "^0.19.0",
+    "axios": "^0.21.1",
     "babel-plugin-dynamic-import-webpack": "^1.1.0",
     "babel-preset-babili": "^0.1.4",
     "babel-preset-vue": "^2.0.2",
